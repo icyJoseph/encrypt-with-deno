@@ -4,11 +4,11 @@ Using the Deno runtime to encrypt, compress, and recover a file.
 
 ## Credit
 
-This package uses `wasm-flate.wasm` build from this [repository](https://github.com/drbh/wasm-flate).
-The encryption is done with `wasm-aes-soft.asm` build from this [repository](https://github.com/icyJoseph/wasm-aes-soft).
+- This package uses `wasm-flate.wasm` built from [this repository](https://github.com/drbh/wasm-flate) to compress/decompress files.
+- The `wasm-flate` module is a thin wasm wrapper around the [flate2](https://docs.rs/crate/flate2/1.0.14) crate.
 
-The `was-flate` module is a thin wasm wrapper around the [flate2](https://docs.rs/crate/flate2/1.0.14) crate.
-The `wasm-aes-soft` module is a thin wasm wrapper around the [aes-soft](https://docs.rs/crate/aes-soft/0.3.3) crate.
+- The aes128 encryption/decryption is done using `wasm-aes-soft.asm` built from [this repository](https://github.com/icyJoseph/wasm-aes-soft).
+- The `wasm-aes-soft` module is a thin wasm wrapper around the [aes-soft](https://docs.rs/crate/aes-soft/0.3.3) crate.
 
 ## Encrypt script
 
